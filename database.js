@@ -23,13 +23,17 @@ function createUser(data) {
 }
 
 function updateUser(id, data) {
-   const index = users.findByIndex((u) => u.id === id);
-   users[index] = {
-      ...users[index],
-      ...data,
-   };
+   const index = users.findIndex((u) => u.id === id);
 
-   return users[index];
+   if (index >= 0) {
+      users[index] = {
+         ...users[index],
+         ...data,
+      };
+      return users[index];
+   }
+
+   return null;
 }
 
 function deleteUser(id) {
