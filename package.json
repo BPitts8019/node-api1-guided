@@ -1,22 +1,26 @@
 {
-  "name": "node-api1-guided",
-  "version": "1.0.0",
-  "description": "Guided project for Lambda School Node API 1 Module.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BPitts8019/node-api1-guided.git"
-  },
-  "author": "Bradley Pitts",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/BPitts8019/node-api1-guided/issues"
-  },
-  "homepage": "https://github.com/BPitts8019/node-api1-guided#readme",
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  }
+   "name": "node-api1-guided",
+   "version": "1.0.0",
+   "description": "Guided project for Lambda School Node API 1 Module.",
+   "main": "index.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "nodemon server.js"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/BPitts8019/node-api1-guided.git"
+   },
+   "author": "Bradley Pitts",
+   "license": "MIT",
+   "bugs": {
+      "url": "https://github.com/BPitts8019/node-api1-guided/issues"
+   },
+   "homepage": "https://github.com/BPitts8019/node-api1-guided#readme",
+   "devDependencies": {
+      "nodemon": "^2.0.7"
+   },
+   "dependencies": {
+      "express": "^4.17.1"
+   }
 }
