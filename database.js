@@ -25,15 +25,12 @@ function createUser(data) {
 function updateUser(id, data) {
    const index = users.findIndex((u) => u.id === id);
 
-   if (index >= 0) {
-      users[index] = {
-         ...users[index],
-         ...data,
-      };
-      return users[index];
-   }
+   users[index] = {
+      ...users[index],
+      ...data,
+   };
 
-   return null;
+   return users[index];
 }
 
 function deleteUser(id) {

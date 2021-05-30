@@ -34,20 +34,32 @@ server.post("/users", (req, res) => {
 });
 
 server.put("/users/:id", (req, res) => {
-   const user = db.updateUser(req.params.id, {
-      name: req.body.name,
-   });
+   const id = req.params.id;
+   const user = db.getUserById(id);
 
    if (user) {
+      db.updateUser(req.params.id, {
+         name: req.body.name,
+      });
+
       res.json(user);
+      return;
    }
 
    res.status(404).json({ message: "User not found" });
 });
 
 server.delete("/users/:id", (req, res) => {
-   db.deleteUser(req.params.id);
-   res.json({ message: "User removed" });
+   const id = req.params.id;
+   const user = db.getUserById(id);
+
+   if (user) {
+      db.deleteUser(req.params.id);
+      res.json({ message: "User removed" });
+      return;
+   }
+
+   res.status(404).json({ message: "User not found" });
 });
 
 server.listen(8080, () => {
